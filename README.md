@@ -26,7 +26,7 @@ It is a little different from emulator, running on the hardware needs batch job.
 #!/bin/bash
 dpcpp -fintelfpga main.cpp read_mm.cpp gmres.cpp scaling.cpp parallel_product.cpp -o fpga -Xsharedware -DFPGA=1
 2. submit job.sh to the compile nodes:
-qsub -I -l nodes=1:fpga_compile:ppn=2 -d . job.sh -l walltime=24:00:00
+qsub -l nodes=1:fpga_compile:ppn=2 -d . job.sh -l walltime=24:00:00
 3. run on the execution nodes:
 qsub -I -l nodes=1:fpga_runtime:arria10:ppn=2 -d . (or stritix10)
 4. ./fpga wang3.mtx
