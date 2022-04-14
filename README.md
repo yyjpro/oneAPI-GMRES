@@ -4,10 +4,8 @@ DPC++ double GMRES, can run on CPU GPU or FPGA (and emulator).
 Document description:
 All files are rewritten in C/C++ mixed style now, and more C++ features may be used in the future.
 1. The parallel_product.cpp program uses Basic-Parallel kernel wrote by myself, it's possible to use oneMKL library in the future.
-2. The read_mm.cpp can read matrix file information which is as same as CPU version except for memory allcation type.
-3. The scaling.cpp is also identity with CPU version, just remain the double version.
-4. The gmres.cpp can execute the function in the parallel_product.cpp file in parallel.
-5. The main.cpp organizes all other files.
+2. The read_mm.cpp can read matrix file information which is as same as CPU version except for memory allcation type. The scaling.cpp is also identity with CPU version, just remain the double version.
+3. The gmres.cpp can execute the function in the parallel_product.cpp file in parallel. The main.cpp organizes all other files.
 
 Command line steps:
 (CMake or Makefile still in progress)
