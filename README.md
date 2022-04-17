@@ -30,3 +30,8 @@ qsub -l nodes=1:fpga_compile:ppn=2 -d . job.sh -l walltime=24:00:00
 3. run on the execution nodes:
 qsub -I -l nodes=1:fpga_runtime:arria10:ppn=2 -d . (or stritix10)
 4. ./fpga wang3.mtx
+
+Here, If it cannot run the executable, changing computing nodes in devcloud maybe useful.
+Input following commands: 
+1. source /data/intel_fpga/devcloudLoginToolSetup.sh
+2. devcloud_login
