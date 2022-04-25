@@ -24,7 +24,7 @@ Compile and run this program in FPGA hardware:
 It is a little different from emulator, running on the hardware needs batch job.
 1. create script file job.sh like:
 #!/bin/bash
-dpcpp -fintelfpga main.cpp read_mm.cpp gmres.cpp scaling.cpp parallel_product.cpp -o fpga -Xsharedware -DFPGA=1
+dpcpp -fintelfpga main.cpp read_mm.cpp gmres.cpp scaling.cpp parallel_product.cpp -o fpga -Xshardware -DFPGA=1
 2. submit job.sh to the compile nodes:
 qsub -l nodes=1:fpga_compile:ppn=2 -d . job.sh -l walltime=24:00:00
 3. run on the execution nodes:
