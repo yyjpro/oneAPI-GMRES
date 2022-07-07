@@ -1,5 +1,5 @@
 # oneAPI-GMRES
-DPC++ double GMRES, can run on CPU GPU or FPGA (and emulator).
+DPC++ double GMRES, can run on CPU GPU or and emulator. But cannot run on the FPGA device, due to the memory allocation problem.
 
 Document description:
 All files are rewritten in C/C++ mixed style now, and more C++/DPC++ features may be used in the future.
@@ -20,6 +20,7 @@ Compile and run this program in FPGA Emulator:
 3. qsub -I -l nodes=1:fpga_runtime:arria10:ppn=2 -d . (this command can be ignored)
 4. ./fpgaemu wang3.mtx
 
+Attention: this way is aborted, just to refer in the future.
 Compile and run this program in FPGA hardware:
 It is a little different from emulator, running on the hardware needs batch job.
 1. create script file job.sh like:
