@@ -21,6 +21,7 @@ Compile and run this program in FPGA Emulator:
 4. ./fpgaemu wang3.mtx
 
 Attention: this way is aborted, just to refer in the future.
+
 Compile and run this program in FPGA hardware:
 It is a little different from emulator, running on the hardware needs batch job.
 1. create script file job.sh like:
